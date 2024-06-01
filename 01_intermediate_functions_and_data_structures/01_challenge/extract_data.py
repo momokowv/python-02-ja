@@ -10,5 +10,5 @@ def better_extract_data(text):
     pattern=r'([a-zA-Z]+):([a-zA-Z0-9]+)'
     return re.findall(pattern, text)
 
-print(extract_data(user_input))
-print(better_extract_data(user_input))
+extract_data(user_input)
+better_extract_data(user_input)
