@@ -56,3 +56,19 @@ class Point:
     def __add__(self, other) :
         return Point(self.x + other.x, self.y + other.y)
     
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y
+    
+    def __str__(self):
+        return f"Point: x={self.x}, y={self.y}"
+    
+    def __repr__(self):
+        return f"Point({self.x},{self.y})"
+p1 = Point(1,2)
+p2 = Point(3,4)
+p3 = p1 + p2
+print(f"Point:({p3.x},{p3.y})")
+print(p1 == p2)
+print(p1 == p3)
+print(p1)
+print(repr(p1))

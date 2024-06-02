@@ -1,7 +1,7 @@
 from inventory import Inventory
 from data_parser import parse_vehicle_data
 
-#vehicles = parse_vehicle_data("vehicles.txt")
+vehicles = parse_vehicle_data("vehicles.txt")
 inventory = Inventory()
 for vehicle in vehicles:
     inventory.add_vehicle(vehicle)
