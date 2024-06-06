@@ -13,3 +13,4 @@ if __name__ == "__main__" :
     list1= [1, 2, 3, 4, 5]
     list2= [4, 1, 6, 2, 10]
     mystery_function(list1)
+    mystery_function(list2)
