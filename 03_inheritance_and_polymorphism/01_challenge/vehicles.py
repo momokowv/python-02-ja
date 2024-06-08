@@ -1,10 +1,12 @@
 # ここにコードを書いてください
-class Vehicle:
+from abc import ABC, abstractmethod
+class Vehicle(ABC):
     def __init__(self, make, model, year):
         self.make=make
         self.model=model
         self.year=year
         
+    @abstractmethod
     def get_details(self):
         pass
         
@@ -28,14 +30,7 @@ def get_vehicle_details(vehicle):
     pass
 
 def display_vehicle_details(vehicle):
-    if vehicle is None or vehicle == "":
-        raise TypeError("Invalid argument. Must not be None or an empty string.")
-    if not vehicle.make or vehicle.year =="0":
-        raise TypeError("Invalid vehicle details. 'make' and 'year' must not be empty or zero.")
-    if isinstance(vehicle, Vehicle):
-        print(vehicle.get_details())
-    else:
-        raise TypeError("Invalid argument. Must be a Vehicle object or its subclass.")
+    print(vehicle.get_details())
 
 
 if __name__ == "__main__":
